@@ -1,0 +1,5 @@
+Checking user: owner@example.com
+User FOUND.
+Stored Password Hash: $2b$10$q3CUIGhupr9DnMODQV2suet9rKTHsV42tJzFL5kqKp5wrnwvSvyuK
+Comparing with 'password123': MATCH
+Expected Hash format (example): $2b$10$9f0nqzBQ2B7fnBJG36vH1u7o7l.qysZnQMNfcu51WvlxEADNZnZ9O

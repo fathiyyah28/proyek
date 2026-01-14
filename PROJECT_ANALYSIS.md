@@ -229,5 +229,4 @@ Berdasarkan analisis kode (`backend/src` dan `frontend/src`):
 *   **Fitur Unggulan**: Multi-cabang, Real-time Stock Tracking, Role-based Access.
 *   **Status**: Core transaction flow (Order -> Stock Deduct) sudah berjalan. Siap didemokan untuk alur Admin management dan Customer Order.
 
----
-*Dokumen ini dibuat otomatis oleh Antigravity Assistant.*
+

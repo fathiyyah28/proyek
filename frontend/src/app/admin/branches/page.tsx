@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import apiClient from '@/lib/api';
+import axios from 'axios';
 import { Branch } from '@/types';
 import { FiPlus, FiEdit, FiTrash2 } from 'react-icons/fi';
 import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Card } from '@/components/ui/Card';
+
 import Link from 'next/link';
 
 export default function AdminBranchesPage() {
@@ -48,10 +48,13 @@ export default function AdminBranchesPage() {
             const message = response.data?.message || 'Cabang berhasil dihapus';
             alert(message);
             fetchBranches();
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Error deleting branch:', error);
             // Show specific error message from backend
-            const errorMessage = error.response?.data?.message || 'Gagal menghapus cabang';
+            let errorMessage = 'Gagal menghapus cabang';
+            if (axios.isAxiosError(error) && error.response?.data?.message) {
+                errorMessage = error.response.data.message;
+            }
             alert(errorMessage);
         }
     };

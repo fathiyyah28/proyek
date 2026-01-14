@@ -111,12 +111,7 @@ export function Sidebar({ user, logout, isOwner, isOpen, onClose }: SidebarProps
             href: '/admin/users',
             roles: ['OWNER']  // Owner only
         },
-        {
-            icon: FiImage,
-            label: 'Homepage Banner',
-            href: '/admin/banners',
-            roles: ['OWNER']  // Owner only
-        },
+
     ];
 
     // Filter menu items based on user role
